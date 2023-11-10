@@ -1,5 +1,7 @@
 import kotlin.random.Random
-
+/*Un programa que genera una lista de 20
+ *numeros enteros pseudo aleatorios
+ *                                     */
 fun main() {
   var rndNumbers: List<Int> = List(20) { Random.nextInt() }
   rndNumbers.forEachIndexed { index, value -> 
