@@ -5,14 +5,14 @@ import kotlin.random.Random
  *la suma de los elementos de la lista*/
 fun main() {
   var rndNumbers: List<Int> = List(20) { Random.nextInt() }
-  var sum = 0
   rndNumbers.forEachIndexed { index, value ->
-    sum += value
     if(index % 5 == 0){
       println()
     }
     print("$value ")
   }
   println()
-  println("La sumatoria de los elementos de la lista es $sum")
+  println("La sumatoria de los elementos de la lista es ${rndNumbers.sumOf{ it }}")
+  println("El menor valor es ${rndNumbers.minOf{ it }}")
+  println("El mayor valor es $(rndNumbers.maxOf{ it }}")
 }
